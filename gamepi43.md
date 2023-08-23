@@ -1,7 +1,7 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>GamePi43:<br>Raspberry Pi Game Console</figcaption>
+  <figcaption>GamePi43:<br>Raspberry pi game console</figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
