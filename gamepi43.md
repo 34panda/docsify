@@ -5,7 +5,7 @@
 
 ---
 
-![Insert image here](image-link)
+![Insert image here](assets/gamepi43/img2.jpg)
 
 ## Table of Contents
 - [GamePi43: A Raspberry Pi Game Console](#gamepi43-a-raspberry-pi-game-console)
