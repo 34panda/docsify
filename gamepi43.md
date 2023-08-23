@@ -103,6 +103,25 @@ I recommend [this YouTube tutorial](https://www.youtube.com/watch?v=P1etPYvWBZ
 
 o) for an additional visual guide.
 
+Clean and format the USB to FAT32.
+
+Inside of the formatted USB drive create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work)
+
+Now we just plug our USB into working GamePi43 device and let it go running, this step ist tricky, because there is no indication of the process being done if you do not have an usb with light signaling data transfer, let it sit for 5-15 minutes, rebot device, unplug USB and plug it into your computer.
+
+If everything went right you should have new working directories inside of the USB drive. (I myself had a litte issue here, because for some reason my USB was not compatible with Retropie OS, and i was stuck for some time figuring out how to fix it, luckily i tried using other avalible USB device and it worked well that time).
+
+Now you need to find some games - its up to you what game you want to use, for tutorials sake we need games ROM file and thats all.
+
+The game that you have has a intedned console for it so find its name inside of USB drive's directories and copy the games file inside of it.
+
+Now just plug USB back into the GamePi43 and wait until the game has been uploaded (the time thet it takes varies from size of the game, and amount of games you transfer, usually it takes 10-25 min).
+
+I recommend [this YouTube tutorial](https://www.youtube.com/watch?v=P1etPYvWBZU&t=373s) made by ETA PRIME if you come by any issues.
+
+
+Reboot the device, and you are done! You are boatifully baked for playing games on your new awesome console!
+
 ### Wirelessly with SFTP (A More Advanced Method)
 For a more advanced method to transfer games, the user can utilize SFTP (SSH File Transfer Protocol). Please refer to the [Waveshare Wiki page](https://www.waveshare.com/wiki/GamePi43) for more information on this process.
 
