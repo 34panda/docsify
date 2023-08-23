@@ -1,28 +1,36 @@
+<figure class="gpi">
+<link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
+                
+  <figcaption>GamePi43:<br>Raspberry Pi Game Console</figcaption>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
+    .gpi {
+      font-family:  'Major Mono Display', sans-serif;                                   
+      font-size: 40px;
+      color: yellow;
+    }
+  </style>
+</figure>
 
 ---
-
-# GamePi43: A Raspberry Pi Game Console
-
----
-
-![Insert image here](assets/gamepi43/img2.jpg)
 
 ## Table of Contents
-- [GamePi43: A Raspberry Pi Game Console](#gamepi43-a-raspberry-pi-game-console)
-  - [Table of Contents](#table-of-contents)
-  - [Introduction](#introduction)
-  - [Devices and Supplies](#devices-and-supplies)
-  - [Assembly Process](#assembly-process)
-    - [Before Assembling](#before-assembling)
-    - [Device Assembly](#device-assembly)
-  - [Operating System](#operating-system)
-    - [Easy Method](#easy-method)
-    - [Advanced Method](#advanced-method)
-  - [ROM Games](#rom-games)
-    - [Using USB Stick or Compatible USB Memory](#using-usb-stick-or-compatible-usb-memory)
-    - [Wirelessly with SFTP (A More Advanced Method)](#wirelessly-with-sftp-a-more-advanced-method)
-  - [Pico-8 Games](#pico-8-games)
-    - [Best Practices:](#best-practices)
+- [Table of Contents](#table-of-contents)
+- [Introduction](#introduction)
+- [Devices and Supplies](#devices-and-supplies)
+- [Assembly Process](#assembly-process)
+  - [Before Assembling](#before-assembling)
+  - [Device Assembly](#device-assembly)
+- [Operating System](#operating-system)
+  - [Easy Method](#easy-method)
+  - [Advanced Method](#advanced-method)
+- [ROM Games](#rom-games)
+  - [Using USB Stick or Compatible USB Memory](#using-usb-stick-or-compatible-usb-memory)
+  - [Wirelessly with SFTP (A More Advanced Method)](#wirelessly-with-sftp-a-more-advanced-method)
+- [Pico-8 Games](#pico-8-games)
+  - [Best Practices:](#best-practices)
+---
+![Insert image here](assets/gamepi43/img2.jpg)
 
 ## Introduction
 (*Introduction content goes here.*)
