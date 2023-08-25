@@ -30,7 +30,7 @@
 - [Pico-8 Games](#pico-8-games)
   - [Best Practices:](#best-practices)
 ---
-![Insert image here](assets/img2.jpg)
+![Insert image here](assets/img2.jpg ':size=500vw')
 
 ## Introduction
 (*Introduction content goes here.*)
