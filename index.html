@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preload "href="https://fonts.cdnfonts.com/css/major-mono-display-2" as="font" type="font/Major Mono Display" crossorigin>
   <meta charset="UTF-8">
   <title>Document</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -11,6 +12,7 @@
 
 <!-- Custom theme styles -->
 <style>
+  @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
   .sidebar {
     backdrop-filter: blur(40px);
   }
@@ -39,6 +41,17 @@
   --link-text-decoration--hover       : underline;
   --link-text-decoration-color        : ;
   --link-text-decoration-color--hover : Goldenrod;
+
+  
+    /* Sidebar name */
+    --sidebar-name-background                     : ;
+    --sidebar-name-color                          : yellow;
+    --sidebar-name-font-family                    : 'Major Mono Display', sans-serif;
+    --sidebar-name-font-size                      : 35px;
+    --sidebar-name-font-weight                    : normal;
+    --sidebar-name-margin                         : 1.5rem 0 0;
+    --sidebar-name-padding                        : ;
+    --sidebar-name-text-align                     : center;
 }
 #bgblur {
   position: fixed;
@@ -63,7 +76,7 @@
       auto2top: true,
       // Change to /home.md
       homepage: 'home.md',
-      name: '<figure class="gpi"><link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet"><figcaption>RAIoT</figcaption><style>@import url("https://fonts.cdnfonts.com/css/major-mono-display-2");.gpi{font-family:"Major Mono Display", sans-serif;px;color: yellow;transform: translate(-20px);}</style></figure>',
+      name: '<figcaption id="name">RAIoT</figcaption>',
       coverpage: false,
     }
   </script>
