@@ -36,9 +36,21 @@
   --link-text-decoration-color        : ;
   --link-text-decoration-color--hover : Goldenrod;
 }
+#bgblur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(15px);
+  filter: brightness(100%); /* For now */
+  z-index: -1;
+}
+
 </style>
 
 <body>
+  <div id="bgblur"></div>
   <div id="app"></div>
   <script>
     window.$docsify = {
