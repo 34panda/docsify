@@ -17,6 +17,8 @@
     backdrop-filter: blur(40px);
   }
   :root {
+    
+    /* text-shadow: -3px 3px 5px black; */
     background-image: url("gamepi43/assets/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -59,11 +61,97 @@
   left: 0;
   right: 0;
   bottom: 0;
-  backdrop-filter: blur(15px);
+  backdrop-filter: blur(60px);
   filter: brightness(100%); /* For now */
   z-index: -1;
 }
+.card-group {
+  position: static;
+  display: flex;
+  justify-content: left;
+  gap: 1vw;
+  align-items: center;
+  transform: translateY(11vw);
+}
+.card {
+  height: 20vw;
+  aspect-ratio: 5 / 7;
+  border: 1px solid #ccc;
+  border-radius: 2vmin;
+  position: absolute;
+  background-color: darkgoldenrod;
+  filter: opacity(1);
+  transition: transform 600ms cubic-bezier(.05, .43, .25, .95);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card1 {
+  background-image: url();
+}
+.card2 {
+  transform: translateX(3.5vw) scale(0.9) rotate(15deg);
+  background-image: url();
+}
+.card3 {
+  transform: translateX(5.5vw) scale(0.8) rotate(30deg);
+  background-image: url();
+}
+.card4 {
+  transform: translate(7.5vw, 1vw) scale(0.7) rotate(40deg);
+  background-image: url();
+}
+.card5 {
+  transform: translate(9.25vw, 2.5vw) scale(0.6) rotate(50deg);
+  background-image: url();
+}
 
+.card1:hover {
+  transform: translate(-10%)  scale(1.2) !important;
+  z-index: 1;
+  
+}
+.card2:hover {
+  transform: translate(90%) scale(1.2) !important;
+  z-index: 1;
+}
+.card3:hover {
+  transform: translate(180%) scale(1.1) !important;
+  z-index: 1;
+}
+.card4:hover {
+  transform: translate(260%) scale(1) !important;
+  z-index: 1;
+}
+.card5:hover {
+  transform: translate(330%) scale(.9) !important;
+  z-index: 1;
+}
+
+.card-group:hover > .card1{
+  transform: translate(-10%)  scale(1.1);
+}
+.card-group:hover > .card2{
+  transform: translate(90%) scale(1);
+}
+.card-group:hover > .card3{
+  transform: translate(180%) scale(0.9);
+}
+.card-group:hover > .card4{
+  transform: translate(260%) scale(0.8);
+}
+.card-group:hover > .card5{
+  transform: translate(330%) scale(0.7);
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .card-group{
+    visibility: hidden;
+  }
+  
+}
 </style>
 
 <body>
