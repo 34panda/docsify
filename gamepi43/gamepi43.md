@@ -6,7 +6,7 @@
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
       font-family:  'Major Mono Display', sans-serif;                                   
-      font-size: 40px;
+      font-size: 35px;
       color: yellow;
     }
     .image{
