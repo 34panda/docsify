@@ -60,6 +60,10 @@
     --sidebar-name-margin                         : 1.5rem 0 0;
     --sidebar-name-padding                        : ;
     --sidebar-name-text-align                     : center;
+
+    /* Blockquote */
+    --blockquote-background             : radial-gradient(circle, rgba(54,70,86, 0.3) , rgb(43, 43, 43, 0.8));
+
 }
 .markdown-section {
   margin: 0 auto;
@@ -100,7 +104,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(0.95) brightness(0.5);
-  z-index: 3;
 }
 .card-content {
   position: absolute;
@@ -141,7 +144,7 @@
 }
 
 .card:hover {
-  z-index: 5;
+  z-index: 1;
   filter: grayscale(0) brightness(1);
 }
 .card1:hover {
