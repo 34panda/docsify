@@ -61,6 +61,12 @@
     --sidebar-name-padding                        : ;
     --sidebar-name-text-align                     : center;
 }
+.markdown-section {
+  margin: 0 auto;
+    max-width: 80%;
+    padding: 30px 15px 40px;
+    position: relative;
+}
 #bgblur {
   position: fixed;
   top: 0;
@@ -94,6 +100,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(0.95) brightness(0.5);
+  z-index: 3;
 }
 .card-content {
   position: absolute;
@@ -134,7 +141,7 @@
 }
 
 .card:hover {
-  z-index: 1;
+  z-index: 5;
   filter: grayscale(0) brightness(1);
 }
 .card1:hover {
