@@ -24,7 +24,7 @@
     </div>
   </div>
   <div class="card4 card">
-    <div class="screen-overlay">
+    <div class="crt">
       <div class="card-content">OPLA IOT</div>
     </div>
   </div>
@@ -39,7 +39,7 @@
     </div>
   </div>
   <div class="card1 card">
-    <div class="screen-overlay">
+    <div class="crt">
       <div class="card-content">GamePi43</div>  
     </div>
   </div>
