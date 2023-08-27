@@ -19,7 +19,7 @@
   :root {
     
     /* text-shadow: -3px 3px 5px black; */
-    background-image: url("gamepi43/assets/bg.png");
+    background-image: url("home/assets/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-clip: content-box;
@@ -76,7 +76,7 @@
 .card {
   height: 20vw;
   aspect-ratio: 5 / 7;
-  border: 1px solid #ccc;
+  border: 10px solid rgb(60, 58, 52);
   border-radius: 2vmin;
   position: absolute;
   background-color: darkgoldenrod;
@@ -85,49 +85,64 @@
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: opacity(0.75);
+  filter: grayscale(0.95) brightness(0.5);
+}
+.card-content {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  border: 5px solid blanchedalmond;
+  border-radius: 1vmin;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  text-shadow: 0 0 5px black;
+  
 }
 .card1 {
-  background-image: url();
+  background-image: url(home/assets/gameboy_yellow.jpg);
 }
 .card2 {
   transform: translateX(3.5vw) scale(0.9) rotate(15deg);
-  transition: delay(2s);
-  background-image: url();
+  background-image: url(home/assets/arduino_blue.jpg);
 }
 .card3 {
   transform: translateX(5.5vw) scale(0.8) rotate(30deg);
-  background-image: url();
+  background-image: url(home/assets/arduino_yellow.jpg);
 }
 .card4 {
   transform: translate(7.5vw, 1vw) scale(0.7) rotate(40deg);
-  background-image: url();
+  background-image: url(home/assets/arduino_room.jpg);
 }
 .card5 {
   transform: translate(9.25vw, 2.5vw) scale(0.6) rotate(50deg);
-  background-image: url();
+  background-image: url(home/assets/raspberry_yellow.jpg);
 }
 
+.card:hover {
+  z-index: 1;
+  filter: grayscale(0) brightness(1);
+}
 .card1:hover {
   transform: translate(-10%)  scale(1.15) !important;
-  z-index: 1;
-  
 }
 .card2:hover {
   transform: translate(90%) scale(1.15) !important;
-  z-index: 1;
 }
 .card3:hover {
   transform: translate(180%) scale(1.1) !important;
-  z-index: 1;
 }
 .card4:hover {
   transform: translate(260%) scale(1) !important;
-  z-index: 1;
 }
 .card5:hover {
   transform: translate(330%) scale(.9) !important;
-  z-index: 1;
 }
 
 .card-group:hover > .card1{
@@ -165,7 +180,7 @@
       subMaxLevel: 2,
       auto2top: true,
       // Change to /home.md
-      homepage: 'home.md',
+      homepage: 'home/home.md',
       name: '<figcaption id="name">RAIoT</figcaption>',
       coverpage: false,
     }

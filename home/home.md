@@ -18,10 +18,20 @@
 
 
 <div class="card-group">
-  <div class="card5 card">abc</div>
-  <div class="card4 card">sbas</div>
-  <div class="card3 card">fbsae</div>
-  <div class="card2 card">fbsae</div>
-  <div class="card1 card">fbsae</div>
+  <div class="card5 card">
+    <div class="card-content">Raspberry Pi</div>
+  </div>
+  <div class="card4 card">
+    <div class="card-content">OPLA IOT</div>
+  </div>
+  <div class="card3 card">
+    <div class="card-content">Picade</div>
+  </div>
+  <div class="card2 card">
+    <div class="card-content">Arduino LED's</div>
+  </div>
+  <div class="card1 card">
+    <div class="card-content">GamePi43</div>  
+  </div>
 </div>
 
