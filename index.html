@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="preload" href="home/tiny-assets/gameboy_yellow.jpg" as="image">
+  <link rel="preload" href="home/tiny-assets/arduino_blue.jpg" as="image">
+  <link rel="preload" href="home/tiny-assets/arduino_yellow.jpg" as="image">
+  <link rel="preload" href="home/tiny-assets/raspberry_yellow.jpg" as="image">
+  <link rel="preload" href="home/tiny-assets/arduino_room.jpg" as="image">
+
   <link rel="preload "href="https://fonts.cdnfonts.com/css/major-mono-display-2" as="font" type="font/Major Mono Display" crossorigin>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -66,6 +72,7 @@
   z-index: -1;
 }
 .card-group {
+  will-change: transform;
   position: static;
   display: flex;
   justify-content: left;
@@ -74,6 +81,7 @@
   transform: translateY(11vw);
 }
 .card {
+  will-change: transform;
   height: 20vw;
   aspect-ratio: 5 / 7;
   border: 10px solid rgb(60, 58, 52);
@@ -106,23 +114,23 @@
   
 }
 .card1 {
-  background-image: url(home/assets/gameboy_yellow.jpg);
+  background-image: url(home/tiny-assets/gameboy_yellow.jpg);
 }
 .card2 {
   transform: translateX(3.5vw) scale(0.9) rotate(15deg);
-  background-image: url(home/assets/arduino_blue.jpg);
+  background-image: url(home/tiny-assets/arduino_blue.jpg);
 }
 .card3 {
   transform: translateX(5.5vw) scale(0.8) rotate(30deg);
-  background-image: url(home/assets/arduino_yellow.jpg);
+  background-image: url(home/tiny-assets/arduino_yellow.jpg);
 }
 .card4 {
   transform: translate(7.5vw, 1vw) scale(0.7) rotate(40deg);
-  background-image: url(home/assets/arduino_room.jpg);
+  background-image: url(home/tiny-assets/arduino_room.jpg);
 }
 .card5 {
   transform: translate(9.25vw, 2.5vw) scale(0.6) rotate(50deg);
-  background-image: url(home/assets/raspberry_yellow.jpg);
+  background-image: url(home/tiny-assets/raspberry_yellow.jpg);
 }
 
 .card:hover {
