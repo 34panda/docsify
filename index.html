@@ -92,6 +92,7 @@
 }
 .card2 {
   transform: translateX(3.5vw) scale(0.9) rotate(15deg);
+  transition: delay(2s);
   background-image: url();
 }
 .card3 {
@@ -108,12 +109,12 @@
 }
 
 .card1:hover {
-  transform: translate(-10%)  scale(1.2) !important;
+  transform: translate(-10%)  scale(1.15) !important;
   z-index: 1;
   
 }
 .card2:hover {
-  transform: translate(90%) scale(1.2) !important;
+  transform: translate(90%) scale(1.15) !important;
   z-index: 1;
 }
 .card3:hover {
@@ -130,20 +131,20 @@
 }
 
 .card-group:hover > .card1{
-  transform: translate(-10%)  scale(1.1);
-}
-.card-group:hover > .card2{
-  transform: translate(90%) scale(1);
-}
-.card-group:hover > .card3{
-  transform: translate(180%) scale(0.9);
-}
-.card-group:hover > .card4{
-  transform: translate(260%) scale(0.8);
-}
-.card-group:hover > .card5{
-  transform: translate(330%) scale(0.7);
-}
+  transform: translate(-10%) scale(1.1) rotate(-15deg);
+} 
+.card-group:hover > .card2{ 
+  transform: translate(90%)  scale(1.0) rotate(30deg);
+} 
+.card-group:hover > .card3{ 
+  transform: translate(180% ) scale(0.9) rotate(-20deg);
+} 
+.card-group:hover > .card4{ 
+  transform: translate(260%) scale(0.8) rotate(45deg);
+} 
+.card-group:hover > .card5{ 
+  transform: translate(330% ) scale(0.7) rotate(30deg);
+} 
 
 
 
