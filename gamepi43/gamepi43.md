@@ -66,8 +66,7 @@
     @media only screen and (max-width: 600px) {
       .image-border {
         margin-left: 0;
-        margin-right: 40px;
-        padding-right: 40px;
+        margin-right: 50px;
       }
     }   
   </style>
@@ -94,7 +93,7 @@
 
 ---
 
-![Insert image here](assets/img2.jpg ":size=480vmin :class=image-border")
+![Insert image here](assets/img2.jpg ":size=440vmin :class=image-border")
 
 ## Introduction
 
