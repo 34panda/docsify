@@ -62,7 +62,12 @@
       --yellow: #FFD913;
       --orange: #FF9C55;
       --red: #FF5555;
-    } 
+    }
+    @media only screen and (max-width: 600px) {
+      .image-border {
+        margin-left: 0;
+      }
+    }   
   </style>
 </figure>
 
