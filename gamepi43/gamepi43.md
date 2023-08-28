@@ -93,7 +93,7 @@
 
 ---
 
-![Insert image here](assets/img2.jpg ":size=440vmin :class=image-border")
+![Insert image here](assets/img2.jpg ":size=440vmin :class=image-border :no-zoom")
 
 ## Introduction
 
