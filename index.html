@@ -103,13 +103,14 @@
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(0.95) brightness(0.5);
+  filter: grayscale(0.95) brightness(0.5) blur(1.2px);
   box-shadow: 5px 10px 20px black;
 }
 .card-content {
+  padding-top: 20px;
   will-change: transform;
   position: absolute;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   top: 0;
   right: 0;
@@ -123,6 +124,8 @@
   font-size: large;
   font-weight: bold;
   text-shadow: 0 0 5px black;
+  box-shadow: 0 0 0 white;
+  font-size: 25px;
 }
 .card1 {
   background-image: url(home/tiny-assets/gameboy_yellow.jpg);
@@ -150,10 +153,6 @@
   box-shadow: 5px 22px 20px black;
 }
 
-.card:hover .card-content {
-  animation: textShadow 1.6s infinite; 
-}
-
 .card:hover .crt::before, .card:hover .crt::after {
   visibility: visible;
 }
@@ -172,6 +171,28 @@
 .card5:hover {
   transform: translate(330%) scale(.9) !important;
 }
+
+
+.card:hover .card-content {
+  animation: textShadow 1.6s infinite; 
+}
+
+.card1:hover .card-content{
+  box-shadow: 0 0 30px rgb(222, 179, 114);
+}
+.card2:hover .card-content{
+  box-shadow: 0 0 30px rgb(198, 212, 212);
+}
+.card3:hover .card-content{
+  box-shadow: 0 0 30px rgb(222, 179, 114);
+}
+.card4:hover .card-content{
+  box-shadow: 0 0 30px rgb(187, 187, 217);
+}
+.card5:hover .card-content{
+  box-shadow: 0 0 30px rgb(237, 180, 110);
+}
+
 
 .card-group:hover > .card1{
   transform: translate(-10%) scale(1.1) rotate(-15deg);
