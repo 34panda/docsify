@@ -33,7 +33,7 @@
       </a>
     </div>
     <div class="card3 card">
-      <a href="#/home/home">
+      <a href="#/picade/picade">
         <div class="crt">
           <div class="card-content">Picade</div>
         </div>
