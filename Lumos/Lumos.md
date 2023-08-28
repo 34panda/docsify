@@ -1,5 +1,6 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
+
                 
   <figcaption>luMOS:<br> Arduino led project</figcaption>
   <style>
