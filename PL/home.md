@@ -14,3 +14,31 @@
 </figure>
 
 > Niesamowity projekt.
+
+<div class="card-group">
+  <div class="card5 card">
+    <div class="crt">
+      <div class="card-content">Raspberry Pi</div>
+    </div>
+  </div>
+  <div class="card4 card">
+    <div class="crt">
+      <div class="card-content">OPLA IOT</div>
+    </div>
+  </div>
+  <div class="card3 card">
+    <div class="crt">
+      <div class="card-content">Picade</div>
+    </div>
+  </div>
+  <div class="card2 card">
+    <div class="crt">
+      <div class="card-content">Arduino Lumos</div>
+    </div>
+  </div>
+  <div class="card1 card">
+    <div class="crt">
+      <div class="card-content">GamePi43</div>  
+    </div>
+  </div>
+</div>
