@@ -9,6 +9,9 @@
       font-size: 40px;
       color: yellow;
     }
+    .image{
+      border-radius: 4%;
+    }
   </style>
 </figure>
 
@@ -75,7 +78,7 @@ There are two possible device designes based on power scheme:
 
 #### Simplified
 
-![Simplified design](assets/device-design.png "Simplified design")
+![Simplified design](assets/device-design.png "Simplified design :size=700vw :class=image")
 
 > **Note** <br/>
 > Since there are no available module in components palette we're using some
