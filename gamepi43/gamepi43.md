@@ -11,6 +11,7 @@
     }
     .image-border {
       margin: 40px;
+      /* border-radius: 1vmin; */
       border: 3px solid var(--primary);
       box-shadow:
         10px 10px 0 -3px var(--background),
