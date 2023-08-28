@@ -66,6 +66,8 @@
     @media only screen and (max-width: 600px) {
       .image-border {
         margin-left: 0;
+        margin-right: 40px;
+        padding-right: 40px;
       }
     }   
   </style>
