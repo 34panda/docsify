@@ -35,7 +35,7 @@
   </div>
   <div class="card2 card">
     <div class="crt">
-      <div class="card-content">Arduino LED's</div>
+      <div class="card-content">Arduino Lumos</div>
     </div>
   </div>
   <div class="card1 card">
