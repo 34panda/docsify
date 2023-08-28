@@ -6,6 +6,7 @@
   <link rel="preload" href="home/tiny-assets/arduino_yellow.jpg" as="image">
   <link rel="preload" href="home/tiny-assets/raspberry_yellow.jpg" as="image">
   <link rel="preload" href="home/tiny-assets/arduino_room.jpg" as="image">
+  <link rel="icon" href="home/assets/logo1.svg">
 
   <link rel="preload "href="https://fonts.cdnfonts.com/css/major-mono-display-2" as="font" type="font/Major Mono Display" crossorigin>
   <meta charset="UTF-8">
@@ -82,7 +83,7 @@
   z-index: -1;
 }
 .card-group {
-  margin-top: 20px;
+  margin-top: 2vw;
   will-change: transform;
   position: static;
   display: flex;
@@ -103,7 +104,7 @@
   text-align: center;
   background-repeat: no-repeat;
   background-size: cover;
-  filter: grayscale(0.95) brightness(0.5) blur(1.2px);
+  filter: grayscale(0.95) brightness(0.5);
   box-shadow: 5px 10px 20px black;
 }
 .card-content {
@@ -123,9 +124,11 @@
   color: white;
   font-size: large;
   font-weight: bold;
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 10px black;
   box-shadow: 0 0 0 white;
   font-size: 25px;
+  backdrop-filter: blur(2px);
+  filter: blur(2px);
 }
 .card1 {
   background-image: url(home/tiny-assets/gameboy_yellow.jpg);
@@ -175,6 +178,8 @@
 
 .card:hover .card-content {
   animation: textShadow 1.6s infinite; 
+  backdrop-filter: blur(0);
+  filter: blur(0);
 }
 
 .card1:hover .card-content{
@@ -384,18 +389,24 @@
 @media only screen and (max-width: 600px) {
   .card-group{
     visibility: hidden;
-  }
-  
+  }  
 }
+
 @media (min-width: 1440px) and (max-width: 1500px) {
   .card {
     height: 25vh;
+  }
+  .card-group {
+    margin-top: 2.5vh;
   }
 }
 
 @media (min-width: 2160px) {
   .card {
     height: 25vh;
+  }
+  .card-group {
+    margin-top: 2.5vh;
   }
 }
 </style>
