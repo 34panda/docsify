@@ -2,7 +2,7 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>ROBOTICS AND IOT<br>Academical e-learning course.</figcaption>
+  <figcaption>ROBOTICS AND IOT<br><span>Academical e-learning course.</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
@@ -10,6 +10,10 @@
       font-size: 35px;
       color: yellow;
       text-shadow: -3px 3px 5px black;
+    }
+    figcaption span {
+      color: orange;
+      font-size: 30px
     }
   </style>
 </figure>
