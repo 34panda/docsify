@@ -1,18 +1,24 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>RASPBERrY hOME:<br>smart home Assistance</figcaption>
+  <figcaption>RASPBERrY hOME:<br><span>smart home Assistance</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
       font-family:  'Major Mono Display', sans-serif;                                   
       font-size: 35px;
       color: yellow;
-    }  
+    } 
+    figcaption span {
+      color: turquoise;
+      font-size: 30px
+    }
   </style>
 </figure>
 
 ---
+
+![Alt text](assets/img1.jpg)
 
 ## Table of Contents
 - [Introduction](#introduction)
@@ -51,8 +57,6 @@
   - ⏰ [Handle Lights When Away](#handle-lights-when-away)
 
 ---
-
-![Alt text](assets/img1.jpg)
 
 ## Introduction
 This project showcases the prowess of Raspberry Pi 4 and Home Assistant, offering a glimpse into the realm of smart homes. This project serves as both a practical example of Raspberry Pi usage and an introduction to simple automations that can be built using Home Assistant.

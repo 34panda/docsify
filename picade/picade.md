@@ -1,13 +1,17 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>PICADE:<br>Raspberry pi Arcade Machine</figcaption>
+  <figcaption>PICADE:<br><span>Raspberry pi Arcade Machine</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
       font-family:  'Major Mono Display', sans-serif;                                   
       font-size: 35px;
       color: yellow;
+    } 
+    figcaption span {
+      color: turquoise;
+      font-size: 30px
     }
   </style>
 </figure>

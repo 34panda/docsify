@@ -1,13 +1,17 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>GamePi43:<br>Raspberry pi game console</figcaption>
+  <figcaption>GamePi43:<br><span>Raspberry pi game console</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
       font-family:  'Major Mono Display', sans-serif;                                   
       font-size: 35px;
       color: yellow;
+    } 
+    figcaption span {
+      color: turquoise;
+      font-size: 30px
     }
     .image-border {
       margin: 40px;

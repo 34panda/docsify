@@ -2,13 +2,17 @@
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
 
                 
-  <figcaption>luMOS:<br> Arduino led project</figcaption>
+  <figcaption>luMOS:<br><span>Arduino led project</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
       font-family:  'Major Mono Display', sans-serif;                                   
       font-size: 40px;
       color: yellow;
+    } 
+    figcaption span {
+      color: turquoise;
+      font-size: 30px
     }
     .image{
       border-radius: 4%;
