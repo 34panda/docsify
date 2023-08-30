@@ -1,7 +1,7 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>RASPBERrY hOME:<br>smart home with raspberry pi</figcaption>
+  <figcaption>RASPBERrY hOME:<br>smart home Assistance</figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
