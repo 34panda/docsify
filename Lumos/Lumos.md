@@ -23,7 +23,7 @@
 ---
 ![Picture 1](/screenshots/Picture1.png "Picture 1")
 
-# Table of contents
+## Table of Contents
 - [Table of contents](#table-of-contents)
   - [What are we going to build?](#what-are-we-going-to-build)
   - [Prerequisites](#prerequisites)

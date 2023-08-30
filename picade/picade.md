@@ -16,8 +16,8 @@
   </style>
 </figure>
 
-## Contents:
-- [Contents:](#contents)
+## Table of Contents:
+- [Table of Contents:](#table-of-contents)
 - [Introduction](#introduction)
 - [Assembly](#assembly)
 - [Operating System](#operating-system)
