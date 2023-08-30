@@ -22,9 +22,9 @@
 
 <div class="card-group">
     <div class="card5 card">
-      <a href="#/home/home">
+      <a href="#/pihome/pihome">
         <div class="crt">
-          <div class="card-content">Raspberry Pi</div>
+          <div class="card-content">PI Home</div>
         </div>
       </a>
     </div>

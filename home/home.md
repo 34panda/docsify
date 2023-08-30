@@ -23,9 +23,9 @@
 
 <div class="card-group">
     <div class="card5 card">
-      <a href="#/raspberry_pi/raspberry_pi">
+      <a href="#/pihome/pihome">
         <div class="crt">
-          <div class="card-content">Raspberry Home</div>
+          <div class="card-content">Pi Home</div>
         </div>
       </a>
     </div>
