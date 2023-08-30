@@ -22,14 +22,14 @@
 
 
 <div class="card-group">
-    <div class="card4 card">
+    <div class="card5 card">
       <a href="#/raspberry_pi/raspberry_pi">
         <div class="crt">
           <div class="card-content">Raspberry Home</div>
         </div>
       </a>
     </div>
-    <div class="card5 card">
+    <div class="card4 card">
       <a href="#/home/home">
         <div class="crt">
           <div class="card-content">OPLA IOT</div>
