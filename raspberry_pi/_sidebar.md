@@ -3,4 +3,4 @@
 * [Lumos](Lumos/Lumos.md "Arduino Lumos Tutorial")
 * [Picade](picade/picade.md "Picade Tutorial")
 * [OPLA IOT](opla/opla.md "OPLA IOT Tutorial")
-* [Raspberry Pi](raspberry_pi/raspberry_pi.md "Raspberry PI Tutorial")
+* [Raspberry Home](raspberry_pi/raspberry_pi.md "Raspberry PI Tutorial")

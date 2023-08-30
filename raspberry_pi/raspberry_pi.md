@@ -1,7 +1,7 @@
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
-  <figcaption>SMART HOME:<br>Raspberry pi project</figcaption>
+  <figcaption>RASPBERrY hOME:<br>smart home with raspberry pi</figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
@@ -50,8 +50,9 @@
   - 🌙 [Automate LED Turn Off (At 1 AM)](#automate-led-turn-off-at-1-am)
   - ⏰ [Handle Lights When Away](#handle-lights-when-away)
 
+---
 
-![Alt text](raspberry/img1.jpg)
+![Alt text](assets/img1.jpg)
 
 ## Introduction
 This project showcases the prowess of Raspberry Pi 4 and Home Assistant, offering a glimpse into the realm of smart homes. This project serves as both a practical example of Raspberry Pi usage and an introduction to simple automations that can be built using Home Assistant.
@@ -107,13 +108,13 @@ Launch the Raspberry Pi Imager software.
 Click on "Choose OS."
 Navigate to "Other specific-purpose OS > Home assistants and home automation > Home Assistant."
 Choose the correct Home Assistant OS version for your Raspberry Pi hardware (RPi 3 or RPi 4).
-![Alt text](raspberry/img2.png)
+![Alt text](assets/img2.png)
 
-![Alt text](raspberry/img3.png)
+![Alt text](assets/img3.png)
 
-![Alt text](raspberry/img4.png)
+![Alt text](assets/img4.png)
 
-![Alt text](raspberry/img5.png)
+![Alt text](assets/img5.png)
 ### Choose Storage:
 
 Insert your microSD card into your computer. Remember that all card content will be overwritten.
@@ -135,14 +136,14 @@ Insert the microSD card into your Raspberry Pi.
 Connect an Ethernet cable to your Raspberry Pi, and ensure the other end is connected to your network.
 Plug in the power supply to turn on your Raspberry Pi.
 
-![Alt text](raspberry/img6.JPG)
+![Alt text](assets/img6.JPG)
 
 ### Access Home Assistant:
 
 On your desktop browser, within a few minutes, you can access your new Home Assistant at homeassistant.local:8123.
 If you face difficulties due to an older Windows version or network setup, you might access Home Assistant at homeassistant:8123 or http://X.X.X.X:8123 (replace X.X.X.X with your Raspberry Pi’s IP address).
 
-![Alt text](raspberry/img7.jpg)
+![Alt text](assets/img7.jpg)
 
 >**Note** <br/>
 >If you need more help, you can use [Installation Home Assistant](https://www.home-assistant.io/installation/raspberrypi).
@@ -163,32 +164,32 @@ By ensuring you have the Tuya Smart app installed, your LED lights connected via
 1. Log in to the Tuya IoT Platform.
 1. Click on Cloud > Development in the left navigation bar.
 1. On the page that appears, hit Create Cloud Project.
-![Alt text](raspberry/img8.png)
+![Alt text](assets/img8.png)
 1. Fill in Project Name, Description, Industry, Data Center, and choose Smart Home as the Development Method. Select your 1. location's Data Center.
 1. Click Create to proceed.
-![Alt text](raspberry/img9.png)
+![Alt text](assets/img9.png)
 1. In the Configuration Wizard, add Industry Basic Service, Smart Home Basic Service, and Device Status Notification APIs.
-![Alt text](raspberry/img10.png)
+![Alt text](assets/img10.png)
 1. Click Authorize.
 ### Linking Devices:
 1. Go to the Devices tab.
 1. Click Link Tuya App Account > Add App Account.
-![Alt text](raspberry/img11.png)
+![Alt text](assets/img11.png)
 1. Scan the QR code using the Tuya Smart app or Smart Life app under the 'Me' section.
-![Alt text](raspberry/img12.png)
+![Alt text](assets/img12.png)
 1. Confirm in the app.
 1. Check that your LEDs are listed.
-![Alt text](raspberry/img13.png)
+![Alt text](assets/img13.png)
 ### Getting the Authorization Key:
 Click the project to enter the Project Overview page and find the Authorization Key. You'll need this for integration setup.
-![Alt text](raspberry/img14.png)
+![Alt text](assets/img14.png)
 ### Integration Setup:
 1. Go to your Home Assistant instance.
 1. Open Settings > Devices & Services.
 1. Click the Add Integration button at the bottom right.
 1. Choose Tuya from the list.
 1. Follow on-screen instructions to complete the setup.
-![Alt text](raspberry/img15.png)
+![Alt text](assets/img15.png)
 
 >**Note** <br/>
 >If you need more help, you can use [Integration of Tuya](https://www.home-assistant.io/integrations/tuya/#configuration-of-the-tuya-iot-platform).
@@ -205,9 +206,9 @@ Now, let's seamlessly integrate Tailscale with your device. Once Tailscale is in
 ### Obtain the API Key
 For added empowerment, let's secure an API key. You can create one in the [Tailscale Admin Panel](https://login.tailscale.com/admin/settings/authkeys).This digital key unlocks a world of possibilities. The API key allows communication between Tailscale and other platforms, like our beloved Home Assistant. Creating one is a breeze. Access the Tailscale Admin Panel, generate an API key, and give your integration superpowers.
 
-![Alt text](raspberry/img16.png)
+![Alt text](assets/img16.png)
 
-![Alt text](raspberry/img17.png)
+![Alt text](assets/img17.png)
 
 ### Know Your Tailnet Name
 Devices love to converse within a "Tailnet" - their exclusive realm. Familiarize yourself with your Tailnet's name. Where to find it? Simply gaze at the top left corner of the Tailscale Admin Panel, right beside the Tailscale logo. This little gem is the key to harmonious device communication.
@@ -229,7 +230,7 @@ Think about the scenarios you want to create. For example, lights turning off an
 ### Access Home Assistant Automation:
 Inside Home Assistant, navigate to the "Configuration" tab, then select "Automations."
 
-![Alt text](raspberry/img22.png)
+![Alt text](assets/img22.png)
 
 ### Automate LED Turn On (After Sunset):
 1. Create a new automation.
@@ -237,9 +238,9 @@ Inside Home Assistant, navigate to the "Configuration" tab, then select "Automat
 1. Add a condition: "Device Tracker" is home.
 1. Set the action to turn on the LED lights.
 
-![Alt text](raspberry/img18.png)
+![Alt text](assets/img18.png)
 
-![Alt text](raspberry/img21.png)
+![Alt text](assets/img21.png)
 
 ### Automate LED Turn Off (At 1 AM):
 1. Create another automation.
@@ -247,14 +248,14 @@ Inside Home Assistant, navigate to the "Configuration" tab, then select "Automat
 1. Add a condition: "Device Tracker" is home.
 1. Set the action to turn off the LED lights.
 
-![Alt text](raspberry/img19.png)
+![Alt text](assets/img19.png)
 
 ### Handle Lights When Away:
 1. Create a third automation.
 1. Add a condition: "Device Tracker" is not home and "LEDs are on."
 1. Set the action to turn off the LED lights.
 
-![Alt text](raspberry/img20.png)
+![Alt text](assets/img20.png)
 
 By integrating these automations with geolocation, your smart home orchestrates a symphony of actions based on your location and time. As you leave, lights turn off; as night falls, they turn on. These automations ensure your LED lights align with your lifestyle seamlessly. With each departure and arrival, your smart home dances in harmony with your routines.
 
