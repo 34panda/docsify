@@ -2,7 +2,7 @@
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
 
                 
-  <figcaption>luMOS:<br><span>Arduino led project</span></figcaption>
+  <figcaption>luMOS:<br><span>Arduino room Backlight project</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
@@ -14,35 +14,45 @@
       color: turquoise;
       font-size: 30px
     }
-    .image{
-      border-radius: 4%;
+    .image {
+      border-radius: 2vmin;
+    }
+    table {
+      background-color: none !important;
+    }
+    td, th, tr {
+      border: none !important;
+      background: transparent !important;
     }
   </style>
 </figure>
 
 ---
-![Picture 1](assets/arduino_blue.jpg "Arduino_blue")
+![Lumos LED backlight](assets/header.gif ":class=image")
 
 ## Table of Contents
-- [Table of contents](#table-of-contents)
-  - [What are we going to build?](#what-are-we-going-to-build)
-  - [Prerequisites](#prerequisites)
+- [What are we going to build?](#what-are-we-going-to-build)
+- [Prerequisites](#prerequisites)
+- [Get things together](#get-things-together)
   - [Hardware and Supplies](#hardware-and-supplies)
-  - [Assembly](#assembly)
-    - [Before you start](#before-you-start)
-    - [Device assembly](#device-assembly)
-      - [Simplified](#simplified)
-      - [Advanced](#advanced)
-    - [Post assembly device look](#post-assembly-device-look)
-  - [Let the code do the work](#let-the-code-do-the-work)
-    - [The basic idea](#the-basic-idea)
-    - [Arduino part](#arduino-part)
-    - [Android part](#android-part)
-      - [Enable USB debugging](#enable-usb-debugging)
-      - [Clone application from repository](#clone-application-from-repository)
+  - [Before you start](#before-you-start)
+  - [Device assembly](#device-assembly)
+    - [With no external power supply](#with-no-external-power-supply)
+    - [With external power supply](#with-external-power-supply)
+  - [Post assembly device look](#post-assembly-device-look)
+- [Let the code do the work](#let-the-code-do-the-work)
+  - [The basic idea](#the-basic-idea)
+  - [Arduino part](#arduino-part)
+    - [Basic code setup parameters](#basic-code-setup-parameters)
+    - [Some code explanations](#some-code-explanations)
+  - [Android part](#android-part)
+    - [Manual build and install](#manual-build-and-install)
+    - [Install precompiled apk](#install-precompiled-apk)
+- [How does it look like in action](#how-does-it-look-in-action)
+- [Future plans](#future-plans)
 
 ## What are we going to build?
-In this tutorial we are going to build a super beautiful unique room backlight which can replace home fireplace and can be controlled from your Android phone!
+In this tutorial we are going to build an unique and beautiful DIY bluethooth-controlled room backlight based on WS2812B addressable LED stripe and HC-06 UART bluetooth module.
 
 ## Prerequisites
 1. A PC or Mac with installed Windows, GNU/Linux or MacOS correspondingly.
@@ -52,56 +62,57 @@ In this tutorial we are going to build a super beautiful unique room backlight w
 1. Installed and configured Android Studio and Android SDK.
 
 > **Note** <br/>
-> You can download Git from the [official git page](https://git-scm.com/download/win). <br/>
-> [Click here](https://www.arduino.cc/en/software) to download the Arduino IDE.<br/>
-> [Click here](https://developer.android.com/studio) to donwload the Android Studio.
+ Download links for the necessary tools: <br/>
+> - [Git](https://git-scm.com/download/win) official page.<br/>
+> - [Arduino IDE](https://www.arduino.cc/en/software) official page.<br/>
+> - [Android Studio](https://developer.android.com/studio) official page.
 
-## Hardware and Supplies
+## Get things together
+
+### Hardware and Supplies
 In order to assembly the device you need at least next hardware:
-1. Arduino Nano/Uno/Leonardo with ATmega328P or ATmega32U4 microchip.
+1. Arduino Nano/Uno/Leonardo with ATmega328P or ATmega32U4 microcontroller.
 1. WS2812B addressable LED stripe (any type, length and LEDs count).
 1. HC-06 UART bluetooth module.
 1. Power supply on 5V and 3.2A or analogue.
-1. Resistors on 1 kΩ ± 5% (2 pcs).
-1. Resistors on 220 Ω ± 5% (2 pcs) or alternatively 1 pcs 330 Ω ± 5% resistor.
+1. Resistors of 1 kΩ ± 5% (2 pcs).
+1. Resistors of 220 Ω ± 5% (2 pcs) or alternatively 1 pcs 330 Ω ± 5% resistor.
 1. Breadboard.
 1. Bunch of jumper wires.
 1. Your desire and patience ;-)
 
-## Assembly
 ### Before you start
 
 Prepare your workspace to avoid losing parts or damaging the board with static shock or environmental variables. Arrange all components orderly, and inspect them for any potential damages that might cause delays later.
-<p>
+
 Heed any warnings and precautions: These can be found on the product's website or packaging. Devices may vary, so adapt to different situations accordingly.
 
 ### Device assembly
 
 There are two possible device designes based on power scheme:
-* Simplified (all components take power from the arduino pins);
-* Advanced (only bluetooth take power from the arduino, LED stripe has its own).
+* With no external power supply (all components take power from the arduino);
+* With external power supply (only bluetooth take power from the arduino, LED stripe has its own).
 
-#### Simplified
+#### With no external power supply
 
-![Simplified design](assets/device-design.png "Simplified design :size=700vw :class=image")
+![With no external power supply](assets/device-design.png)
 
 > **Note** <br/>
-> Since there are no available module in components palette we're using some
-> component with similar pinout (6 exactly) for HC-06 Bluetooth module. <br/>
->As you can see on the design the pins we're interested in are:<br/>
+> Since there are no available bluetooth module in [Tinkercad](https://www.tinkercad.com/) components palette it was replaced with a 6-pin
+substitude component. <br/><br/>
+Pins we're interested in:<br/>
 >```
 > VCC(2), GND(3), TXD(4), RXD(5)
 >```
-> So we have regular UART interface module.<br/><br/>
-> Actual HC-06 bluetooth module looks like this:<br/>
-![HC-06](assets/hc-06-bt-module.png "HC-06")
+>And here is how actual HC-06 bluetooth module looks like:<br/>
+![HC-06](assets/hc-06-bt-module.png ":size=300vw")
 
 This design scheme is suitable for the LED stripes consisting of 30 or less LEDs. <br/>
-The reason of that is in LEDs power consumption. One **WS2812B** LED consumes **0.06 A** at maximum brightness. And we can't power many stripe LEDs this way because it potentially may cause system instability or even damage. So assembly your device this way is only recommended for a small amount of LEDs.
+The reason for that is power consumption. One **WS2812B** LED consumes **0.06 A** at maximum brightness. And we can't power many stripe LEDs this way because it potentially may cause system instability or even damage. So assembly your device this way is only recommended for a small amount of LEDs.
 
-#### Advanced
+#### With external power supply
 
-![Advanced design](assets/device-design-advanced.png "Advanced design")
+![With external power supply](assets/device-design-advanced.png)
 
 This design includes external power supply which can be added to the whole system as shown on the picture above.
 
@@ -109,7 +120,7 @@ The necessary power supply characteristics dependent on led stripe length and de
 
 For our case (2 m LED stripe, 30 LEDs/m) we can get something like below:
 
-![Example power supply characteristics calculation](assets/power-supply-calculation-results.png "Example power supply characteristics calculation")
+![Example power supply characteristics calculation](assets/power-supply-calculation-results.png)
 
 <span style="color:red">**Important.**</span>
 Be sure to connect both grounds together if you're using 2 different power sources. If you do not connect them, the voltage between these two grounds is somewhat random (determined by surrounding air, environment, etc.) and your signals might not be what you intended.
@@ -125,55 +136,57 @@ Be sure to connect both grounds together if you're using 2 different power sourc
 > * The number of LEDs to be entered is always the number of physical LEDs (even if groups of 3 or 6 physical LEDs by 12V/24V strips are controlled as a single LED)
 
 ### Post assembly device look
-![Device look](assets/post-assembly-device-look.jpg "Device look")
+![Device look](assets/post-assembly-device-look.jpg)
 
 ## Let the code do the work
 
 ### The basic idea
 
-The idea of that whole project based on the Perlin noise.
-<p>
-This type of noise can be used to create a great variety of procedural textures. Synthetic textures using Perlin noise are often used in CGI to make computer-generated visual elements - such as object surfaces, fire, smoke, or clouds - appear more natural, by imitating the controlled random appearance of textures in nature. In our case we are going to simulate the fire behaviour and Perlin noise is the best match for that purpose.
+The main idea of this project is based on Perlin noise.
 
-First things first we are going to use **HSV (Hue Saturation Value)** color model. Then we should receive via bluetooth the **HUE** value of our desired color, then slightly modify it using perlin-generated value as well as **SATURATION** and **VALUE** and send resulted values to the LED stripe.
+This type of noise can be used to create a great variety of procedural textures. Synthetic textures using Perlin noise are often used to make computer-generated visual elements - such as object surfaces, fire, smoke, or clouds - appear more natural, by imitating the controlled random appearance of textures in nature. In our case we are going to simulate the fire behaviour and Perlin noise is the best match for that purpose.
+
+For this project we are going to use **HSV (Hue Saturation Value)** color model. Then using bluetooth module we should receive the **Hue** of our desired color, slightly modify it using perlin-generated value as well as **Saturation** and **Value** parameters and send resulted values to the LED stripe.
 
 ### Arduino part
 
-Open Arduino IDE, go to the libraries section (left stripe) and install the latest version of the FastLED library to be able to drive the stripe.
-
-![Arduino library manager](assets/arduino-library-manager.png "Advanced design")
-
 Clone the project repository using git on your computer:
 ```sh
-> git clone https://github.com/andrew-andrushchenko/Lumos.git
+$ git clone https://github.com/andrew-andrushchenko/Lumos-arduino.git
 ```
 
 After that you can find arduino project file with ***.ino** extension, open it.
 
+> **Note**<br/>
+To be able to compile and use this sketch you should install the latest version of [FastLED](https://github.com/FastLED/FastLED) arduino library.
+
+![Arduino library manager](assets/arduino-library-manager.png)
+
+#### Basic code setup parameters
 Look at the very beginning of the code. Here we have some important setup definitions.
 
-Here we can enable or disable debug mode to see (or not see XD) obtained values and other communications. (Set it to 0 to disable debug messages and to 1 to enable them).
+This define line allows us to enable or disable debug mode to see (or not see XD) data transfer communications. (Set it to 1 to enable and 0 to disable).
 
-```arduino
-#define LUMOS_DEBUG                     0
+```clike
+#define LUMOS_DEBUG  0
 ```
 
-Then we have **LED_COUNT** parameter which determines how many leds our stripe have. Put your amount here. **LED_PIN** parameter tells us on which arduino pin we would like to drive our led stripe. Put the arduino pin number to which stripe's **DIN** pin is connected.
+Then we have **LED_COUNT** parameter which defines how many LEDs our stripe have. Put your amount here. **LED_PIN** parameter points to an arduino pin which will send commands to the LED stripe. This pin is wired with stripe's **DIN**.
 
-```arduino
-#define LED_COUNT                      60
-#define LED_PIN                         7
+```clike
+#define LED_COUNT  60
+#define LED_PIN     7
 ```
 
 Since we're using two-dimensional Perlin noise we should move around generated values with some step size. You can put your's here. You can play with the values but the default 15 is optimal one.
 
-```arduino
-#define COLOR_SHIFT_STEP               15
+```clike
+#define COLOR_SHIFT_STEP  15
 ```
 
-The next bunch of settings defines how much color components like **Hue**, **Saturation** and **Value** will bend around some base value creating realistic fire effect.
+The next bunch of settings defines by how much components like **Hue**, **Saturation** and **Value** should bend around some base value creating realistic fire effect.
 
-```arduino
+```clike
 #define HUE_DEVIATION                  21
 #define MIN_SATURATION_DEVIATION      245
 #define MAX_SATURATION_DEVIATION      255
@@ -182,16 +195,16 @@ The next bunch of settings defines how much color components like **Hue**, **Sat
 ```
 
 Here we have bluetooth data transfer pins to define. Look carefully how you connected your HC-06 module data lines (RXD, TXD) and provide the correct arduino pins. <br/>
-For instance if you connect your HC-06 **RXD** pin to arduino's 10th pin, and **TXD** pin to arduino's 11th pin, then the setup will look like below:
+For instance if you connect your HC-06 **RXD** pin to arduino's 10th pin, and **TXD** pin to arduino's 11th pin, then the setup will look like this:
 
-```arduino
+```clike
 #define BT_RX_PIN                      10
 #define BT_TX_PIN                      11
 ```
 
-Then define some macro which will vary based on debug defines. If debug is enabled the *LOG_D(x)* will be replaced everywhere in the code to *Serial.println(x)* line where *x* is some value to output, else *LOG_D(x)* will be replaced with empty line.
+Then we define some macro which will vary based on debug definition. If debug is enabled the *LOG_D(x)* will be replaced by *Serial.println(x)* line everywhere in the code where *x* is some value to output, else *LOG_D(x)* will be replaced with nothing.
 
-```arduino
+```clike
 #if LUMOS_DEBUG == 1
 #define LOG_D(x) Serial.println(x)
 #else
@@ -199,9 +212,13 @@ Then define some macro which will vary based on debug defines. If debug is enabl
 #endif
 ```
 
+At this point we have finished our basic setup.
+
+#### Some code explanations
+
 After including necessary libraries such as FastLED to be able to drive LED stripe and SoftwareSerial to be able to control HC-06 bluetooth module we should define some global variables to use in our project.<br/>
 
-```arduino
+```clike
 #include <FastLED.h>
 #include <SoftwareSerial.h>
 
@@ -214,29 +231,29 @@ uint8_t brightnessLevel = 0;
 
 The line below allows us to define LED stripe as an array of size **LED_COUNT** in our code:
 
-```arduino
+```clike
 CRGB leds[LED_COUNT];
 ```
 
 This line allows us to define HC-06 module as an object in our code:
 
-```arduino
+```clike
 SoftwareSerial bluetooth(BT_RX_PIN, BT_TX_PIN);
 ```
 
-Next two lines define variables for current color hue and led stripe brightness which we will receive via bluetooth and use for whole project.
+Next two lines introduce variables for current color hue and LED stripe brightness which we will receive via bluetooth.
 
-```arduino
+```clike
 uint8_t hue = 0;
 uint8_t brightnessLevel = 0;
 ```
 
-Here inside the setup function we're going to initialize our led stripe with our stripe type (NEOPIXEL), driving pin (LED_PIN) and our array which we have already defined earlier. We also initialize bluetooth serial with the default HC-06 module baud rate of 9600.
+Here inside the setup function we're going to initialize our LED stripe with our stripe type (NEOPIXEL), driving pin (LED_PIN) and our array which we have already defined earlier. We also initialize bluetooth serial with the default HC-06 module baud rate of 9600.
 
 > **Note**<br/>
 > HC-06 default baud rate can be changed to whatever else you want by configuring this module using dedicated configuration pins and AT commands. [Click here](https://www.instructables.com/AT-command-mode-of-HC-05-Bluetooth-module/) for more details and instructions.
 
-```arduino
+```clike
 void setup()
 {
 #if LUMOS_DEBUG == 1
@@ -253,52 +270,41 @@ void setup()
 
 After that we have main loop function:
 
-```arduino
-void loop()
+```clike
+int counter = 0;
+inline void stripeCycle()
 {
-    stripeCycle();
-
-    if (bluetooth.available())
+    for (int i = 0; i < LED_COUNT; i++)
     {
-        String cmd = "";
-        while (bluetooth.available())
-        {
-            cmd += (char) bluetooth.read();
-            m_delay(30);
-        }
-
-        LOG_D("Obtained value: " + cmd);
-
-        parseCommand(cmd);
+        leds[i] = getLEDColor((inoise8(i * COLOR_SHIFT_STEP, counter)));
     }
+
+    counter += 20;
+    FastLED.show();
+
+    m_delay(20);
 }
 ```
 
 Here we're going to do a couple of things:
-* Update led stripe
+* Update LED stripe
 * Receive and parse incoming data
 
-All the magic happens inside the *stripeCycle* function. We defined global variable *counter* which takes part in noise generation process. General purpose for this function is to get each *20 ns* some noise value, generate color for the particular LED, set this color for the the corresponding LED on the stripe and finally repeat the procedure for the rest of the LEDs.
+All the magic happens inside the *stripeCycle* function. We introduced global variable *counter* which takes part in noise generation process. General purpose for this function is to get each *20 ms* some noise value, generate color for the particular LED, set this color to the the corresponding LED on the stripe and finally repeat the procedure for the rest of the LEDs.
 
-```arduino
+```clike
 int counter = 0;
 inline void stripeCycle()
 {
-    static uint32_t prevTime;
-
-    // shift the party :)
-    if (millis() - prevTime > 20)
+    for (int i = 0; i < LED_COUNT; i++)
     {
-        prevTime = millis();
-
-        for (int i = 0; i < LED_COUNT; i++)
-        {
-            leds[i] = getLEDColor((inoise8(i * COLOR_SHIFT_STEP, counter)));
-        }
-
-        counter += 20;
-        FastLED.show();
+        leds[i] = getLEDColor((inoise8(i * COLOR_SHIFT_STEP, counter)));
     }
+
+    counter += 20;
+    FastLED.show();
+
+    m_delay(20);
 }
 ```
 
@@ -310,7 +316,7 @@ For the *saturation* parameter we have the next logic:
 
 The same applies to the *value* parameter.
 
-```arduino
+```clike
 inline CHSV getLEDColor(uint8_t val)
 {
     return CHSV(
@@ -324,7 +330,7 @@ inline CHSV getLEDColor(uint8_t val)
 The second big part is to obtain and parse data coming through bluetooth channel. For this purpose we have *parseCommand* function which takes some command in form of string, decides what type of the command has come, parses data from it and assigns corresponding global variables defined above.
 
 
-```arduino
+```clike
 inline void parseCommand(const String& cmd)
 {
     if (cmd.charAt(0) == 'c')
@@ -351,7 +357,7 @@ Currently we can obtain and process 2 types of commands:
 
 We defined some simple data protocol our program can use to understand our intensions. Here we have some definitions.
 
-To change hue parameter we should send it as next string:
+To change hue parameter we should send it as a next string:
 ```
 c<hue_value>
 ```
@@ -362,13 +368,13 @@ Example of a valid command to change hue:
 c128
 ```
 
-To change brightness we should send it as next string:
+To change brightness we should send it as a next string:
 ```
 b<brightness_value>
 ```
 where *brightness_value* is some value between 0 and 100 expressed in percentages.
 
-Example of a valid command to change hue:
+Example of a valid command to change brightness:
 ```
 b80
 ```
@@ -382,16 +388,18 @@ In this tutorial, we will not cover programming for mobile platforms but give yo
 
 First of all install the latest stable Android Studio on your PC or Mac along with Android SDK tools (should be prompted to install automatically on first Android Studio run).
 
-> **Note**<br/>
-Depending on your android device you should probably install some additional drivers to be able to use usb debugging.
+#### Manual build and install
 
-#### Enable USB debugging
+> **Note**<br/>
+Depending on your android device you should probably install some additional drivers to be able to use USB debugging.
+
+**Enable USB debugging**
 
 Go to Settings on your phone, then System or About, and tap 5 times on the *Build version*, enter your lockscreen PIN or Pattern. Now you're successfully enabled the developer options menu on your smartphone.
 
 Open them and switch on *Enable USB debugging* option.
 
-#### Clone application from repository
+**Clone application from repository**
 
 Open Android Studio and select *Get from VCS* as on the screen below:
 
@@ -415,4 +423,23 @@ Then connect your device to the computer grant all permissions (if needed), sele
 
 And you're good to go!
 
+#### Install precompiled apk
+
+Go to the project's [github page](https://github.com/andrew-andrushchenko/Lumos) find releases section and download the compiled apk file. Install it on your phone and you're good to go!
+
+> **Attention**<br/>
+In order to install this app your should grant the permission to install apps from unknown sources.
+
+## How does it look in action?
+| <!-- --> | <!-- --> |
+|----------|----------|
+| ![Lumos preview 1](assets/lumos-preview-violet.gif ":class=image") | ![Lumos preview 2](assets/lumos-preview-green.gif ":class=image") |
+| ![Lumos preview 3](assets/lumos-preview-orange.gif ":class=image") | ![Lumos preview 3](assets/lumos-preview-purple.gif ":class=image") |
+
 For the additional details see the project's [github page](https://github.com/andrew-andrushchenko/Lumos).
+
+## Future plans
+
+* Make an iOS version of the application
+* Add more backlight modes (rainbow, color wheel, etc.)
+* Publish the application on Google Play Store and Apple Store.
