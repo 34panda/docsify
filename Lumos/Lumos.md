@@ -2,7 +2,7 @@
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
 
                 
-  <figcaption>luMOS:<br><span>Arduino room Backlight project</span></figcaption>
+  <figcaption>luMOS:<br><span>Arduino room backlight project</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
     .gpi {
