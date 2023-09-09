@@ -89,12 +89,12 @@
   - [Device Assembly](#device-assembly)
 - [Operating System](#operating-system)
   - [Easy Method](#easy-method)
-  - [Advanced Method](#advanced-method)
+  - [Not So Easy Method](#not-so-easy-method)
 - [ROM Games](#rom-games)
-  - [Using USB Stick or Compatible USB Memory](#using-usb-stick-or-compatible-usb-memory)
+  - [Using a USB Stick or Compatible USB Memory](#using-a-usb-stick-or-compatible-usb-memory)
   - [Wirelessly with SFTP (A More Advanced Method)](#wirelessly-with-sftp-a-more-advanced-method)
 - [Pico-8 Games](#pico-8-games)
-  - [Best Practices:](#best-practices)
+- [Best Practices](#best-practices)
 
 ---
 
@@ -102,21 +102,21 @@
 
 ## Introduction
 
-Gamepi43 is a retro-feel handheld gaming console that uses raspberry pi as its main component.
+The GamePi43 is a retro-feel handheld gaming console that uses a Raspberry Pi as its main component.
 
-Its fairly simple to recreate falling in low-intermediate level of technical skills for basic configuration, and high-intermediate for own customisation.
+It's fairly simple to recreate, requiring a low-to-intermediate level of technical skills for basic configuration and a high-intermediate level for customizations.
 
-Its a great project to create, and amazing device to play on.
+It's a great project to undertake and an amazing device to play on.
 
-Body of console is not ergonomic, and buttons are hard to press, but it gest the job done, it is lower engineering quality than consoles designed to be only gaming ones, but versitility and customisation makes it worthwile project.
+While the console's body is not ergonomic and its buttons are hard to press, it gets the job done. Although it's of lower engineering quality than consoles designed solely for gaming, its versatility and customization make it a worthwhile project.
 
-Lets start with what we need for it to work:
+Let's start with what we need for it to work:
 
 ## Devices and Supplies
 
 Building the GamePi43 console is relatively straightforward. The necessary components include a compatible Raspberry Pi model (e.g., B+ / 2B / 3B / 3B+ / 4B). Remember to check compatibility with the [GamePi43](https://www.waveshare.com/wiki/GamePi43) device.
 
-For my build, I used a [Raspberry Pi 4 8GB Kit from Botland]() and a [GamePi43 from Botland](https://botland.com.pl/gaming-pi-retro-pie-konsole/17598-gamepi43-zestaw-akcesoriow-do-budowy-konsoli-dla-raspberry-pi-b-2b-3b-3b-4b-waveshare-16967-5904422327965.html?cd=1050025856&ad=55008030609&kd=&gclid=Cj0KCQjwuZGnBhD1ARIsACxbAVi_yP_z9whvMxNqS_-G67z5Up9icvYHbGoLaR1e1NCGWmEW12LuSBYaAiQnEALw_wcB).
+For my build, I used a [Raspberry Pi 4 8GB Kit from Botland](#) and a [GamePi43 from Botland](https://botland.com.pl/gaming-pi-retro-pie-konsole/17598-gamepi43-zestaw-akcesoriow-do-budowy-konsoli-dla-raspberry-pi-b-2b-3b-3b-4b-waveshare-16967-5904422327965.html?cd=1050025856&ad=55008030609&kd=&gclid=Cj0KCQjwuZGnBhD1ARIsACxbAVi_yP_z9whvMxNqS_-G67z5Up9icvYHbGoLaR1e1NCGWmEW12LuSBYaAiQnEALw_wcB).
 
 **_Note:_** Only the Raspberry Pi is needed for this particular project. I used the full kit only because it was part of other projects. If your focus is solely on the GamePi43 console, purchasing just the Raspberry Pi is a cost-effective option.
 
@@ -130,7 +130,7 @@ You may also need a clean USB stick, depending on your intended use for the cons
 
 ### Before Assembling
 
-Prepare your workspace to avoid losing parts or damaging the board with static shock or environmental variables. Arrange all components orderly, and inspect them for any potential damages that might cause delays later.
+Prepare your workspace to avoid losing parts or damaging the board due to static shock or environmental variables. Arrange all components in an orderly fashion, and inspect them for any potential damage that might cause delays later.
 
 **_Heed any warnings and precautions:_** These can be found on the product's website or packaging. Devices may vary, so adapt to different situations accordingly.
 
@@ -140,7 +140,7 @@ Assembly is fairly straightforward if you have inspected all the necessary piece
 
 I found [this visual YouTube tutorial](https://www.youtube.com/watch?v=HrKpUuo6OUg&t=173s) by MakerMan to be helpful.
 
-During assembly, I encountered no significant issues. Inserting the HDMI adapter was slightly tricky but manageable. If you have a prepared SD card with the required system and games, insert it, plug in the power, and you are done! If not, further instructions on installing the [operating system](#operating-system) and [games](#pico-8-games) are provided below.
+During assembly, I encountered no significant issues. Inserting the HDMI adapter was slightly tricky but manageable. If you have a prepared SD card with the required system and games, insert it, plug in the power, and you're done! If not, further instructions on installing the [operating system](#operating-system) and [games](#pico-8-games) are provided below.
 
 ## Operating System
 
@@ -148,47 +148,47 @@ With the physical device ready, the next step is to install the operating system
 
 ### Easy Method
 
-Use Waveshare's customized version of the Retropie/Recalbox operating system, configured with input and additional tweaks found [here](https://www.waveshare.com/wiki/GamePi43).
+Use Waveshare's customized version of the RetroPie/Recalbox operating system, configured with input and additional tweaks found [here](https://www.waveshare.com/wiki/GamePi43).
 
 Utilize an imaging application, like [Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the OS to the SD card. Insert it into the device, boot up, and configure settings such as timezone, WiFi, etc.
 
 If everything goes smoothly, all that remains is installing your chosen games, whether [ROM games](#rom-games) or [Pico-8 games](#pico-8-games).
 
-### Advanced Method
+### Not So Easy Method
 
 (_Instructions for the advanced method go here._)
 
 ## ROM Games
 
-Installing ROM games is incredibly straightforward. Below are two simple methods.
+Installing ROM games is incredibly simple. Below are two simple methods.
 
-### Using USB Stick or Compatible USB Memory
+### Using a USB Stick or Compatible USB Memory
 
-Ready a USB stick (8GB or more is recommended).
-Clean and format it to FAT32.
+Prepare a USB stick (8GB or more is recommended). Clean it and format to FAT32.
 
-Then update the device (if you are not on the latest OS version, otherwise skip this step):
+Create an empty directory called `retropie` on the formatted USB drive. Depending on the OS used, this name may vary; `retropie-mount` is another option.
 
-```
-Main screen > Retropie > Retropie Setup > Basic install
-```
-
-Enable USB ROM Service by:
+Then update the device (skip this step if you are already on the latest OS version):
 
 ```
-Main screen > Retropie > Retropie Setup > Configuration/tools > usbromservice - USB ROM Service > 1 Enable USB ROM Service
+Main screen > RetroPie > RetroPie Setup > Basic Install
 ```
-Inside of the formatted USB drive create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work)
 
-Now, just plug your USB into the working GamePi43 device and let it run. This step is tricky because there is no indication of the process being done if you do not have a USB with a light signaling data transfer. Let it sit for 5-15 minutes, reboot the device, unplug the USB, and plug it into your computer.
+Enable the USB ROM Service by:
+
+```
+Main screen > RetroPie > RetroPie Setup > Configuration/tools > usbromservice - USB ROM Service > 1 Enable USB ROM Service
+```
+
+Plug your USB into the working GamePi43 device and let it run. This step is tricky because there is no indication of the process being completed unless you have a USB with a light signaling data transfer. Let it sit for 5-15 minutes, then reboot the device and plug the USB back into your computer.
 
 If everything went right, you should have new working directories inside the USB drive. (I myself had a little issue here because for some reason my USB was not compatible with Retropie OS, and I was stuck for some time figuring out how to fix it. Luckily, I tried using another available USB device, and it worked well that time).
 
 Now you need to find some games - it's up to you what game you want to use; for the tutorial's sake, we need the game's ROM file, and that's all.
 
-The game that you have has an intended console for it, so find its name inside the USB drive's directories and copy the game's file inside of it.
+Find the corresponding console directory within the USB drive's directories and copy the game's file into it.
 
-Reboot the device, and you are done! You are boatifully baked for playing games on your new awesome console!
+Reboot the device, and you're done! You're now ready to play games on your new awesome console!
 
 I recommend [this YouTube tutorial](https://www.youtube.com/watch?v=P1etPYvWBZU&t=373s) made by ETA PRIME if you come by any issues.
 
@@ -198,20 +198,24 @@ For a more advanced method to transfer games, the user can utilize SFTP (SSH Fil
 
 ## Pico-8 Games
 
-(_Instructions for Pico-8 games go here._)
+You can purchase the license for Pico-8 [here](https://www.lexaloffle.com/pico-8.php#getpico8). Once purchased, download the Raspberry Pi zip version and unzip it to your SD card (the same one with your operating system).
+
+After that, add a folder named "pico-8" and inside it create a subfolder named "carts". Place any games you want in there.
+
+After that, you'll have to manually launch the Pico-8. But you're good to go!
+
+## Best Practices
+
+**_1. Remember to update the system regularly._**  
+**_2. Make sure you have enough space on your SD card for all the games and updates._**  
+**_3. Create a backup of your SD card._**  
+**_4. Check for compatibility of ROMs before installing them._**  
+**_5. Monitor the device's temperature and keep it in a cool environment._**
+
+## Conclusion
 
 ---
 
-I hope you find this guide informative and clear! Please don't hesitate to reach out if you need additional clarification or further assistance with anything. Enjoy your Raspberry Pi GamePi43 console!
+Whether you're a seasoned Raspberry Pi user or a complete novice, the GamePi43 offers something for everyone. With both easy and advanced setup options, as well as numerous game choices, this console promises hours of nostalgic gaming fun.
 
----
-
-### Best Practices:
-
-1. **Preparation:** Gather all the necessary tools and parts before starting, and follow the guidelines and warnings carefully.
-2. **Clean Workspace:** Maintain an organized workspace to avoid losing or damaging components.
-3. **Follow Instructions:** Refer to manufacturer guides and trusted tutorials.
-4. **Inspect for Compatibility:** Check the compatibility of all the hardware components before purchasing.
-5. **Take Your Time:** Don't rush the process; be patient with the assembly and the software installation.
-6. **Backup Important Files:** If you are using an existing SD card, make sure to back up any important files before proceeding with the installation.
-7. **Learn from Mistakes:** If something goes wrong, don't panic. Troubleshoot the problem, learn from it, and improve.
+Happy gaming!
