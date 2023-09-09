@@ -102,7 +102,15 @@
 
 ## Introduction
 
-(_Introduction content goes here._)
+Gamepi43 is a retro-feel handheld gaming console that uses raspberry pi as its main component.
+
+Its fairly simple to recreate falling in low-intermediate level of technical skills for basic configuration, and high-intermediate for own customisation.
+
+Its a great project to create, and amazing device to play on.
+
+Body of console is not ergonomic, and buttons are hard to press, but it gest the job done, it is lower engineering quality than consoles designed to be only gaming ones, but versitility and customisation makes it worthwile project.
+
+Lets start with what we need for it to work:
 
 ## Devices and Supplies
 
@@ -157,8 +165,9 @@ Installing ROM games is incredibly straightforward. Below are two simple methods
 ### Using USB Stick or Compatible USB Memory
 
 Ready a USB stick (8GB or more is recommended).
+Clean and format it to FAT32.
 
-Update the device (if you are not on the latest OS version, otherwise skip this step):
+Then update the device (if you are not on the latest OS version, otherwise skip this step):
 
 ```
 Main screen > Retropie > Retropie Setup > Basic install
@@ -169,6 +178,7 @@ Enable USB ROM Service by:
 ```
 Main screen > Retropie > Retropie Setup > Configuration/tools > usbromservice - USB ROM Service > 1 Enable USB ROM Service
 ```
+Inside of the formatted USB drive create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work)
 
 Now, just plug your USB into the working GamePi43 device and let it run. This step is tricky because there is no indication of the process being done if you do not have a USB with a light signaling data transfer. Let it sit for 5-15 minutes, reboot the device, unplug the USB, and plug it into your computer.
 
@@ -178,29 +188,9 @@ Now you need to find some games - it's up to you what game you want to use; for 
 
 The game that you have has an intended console for it, so find its name inside the USB drive's directories and copy the game's file inside of it.
 
-Now, just plug the USB back into the GamePi43 and wait until the game has been uploaded (the time that it takes varies from the size of the game and the number of games you transfer, usually taking 10-25 minutes).
-
-I recommend [this YouTube tutorial](https://www.youtube.com/watch?v=P1etPYvWBZ
-
-o) for an additional visual guide.
-
-Clean and format the USB to FAT32.
-
-Inside of the formatted USB drive create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work)
-
-Now we just plug our USB into working GamePi43 device and let it go running, this step ist tricky, because there is no indication of the process being done if you do not have an usb with light signaling data transfer, let it sit for 5-15 minutes, rebot device, unplug USB and plug it into your computer.
-
-If everything went right you should have new working directories inside of the USB drive. (I myself had a litte issue here, because for some reason my USB was not compatible with Retropie OS, and i was stuck for some time figuring out how to fix it, luckily i tried using other avalible USB device and it worked well that time).
-
-Now you need to find some games - its up to you what game you want to use, for tutorials sake we need games ROM file and thats all.
-
-The game that you have has a intedned console for it so find its name inside of USB drive's directories and copy the games file inside of it.
-
-Now just plug USB back into the GamePi43 and wait until the game has been uploaded (the time thet it takes varies from size of the game, and amount of games you transfer, usually it takes 10-25 min).
+Reboot the device, and you are done! You are boatifully baked for playing games on your new awesome console!
 
 I recommend [this YouTube tutorial](https://www.youtube.com/watch?v=P1etPYvWBZU&t=373s) made by ETA PRIME if you come by any issues.
-
-Reboot the device, and you are done! You are boatifully baked for playing games on your new awesome console!
 
 ### Wirelessly with SFTP (A More Advanced Method)
 
