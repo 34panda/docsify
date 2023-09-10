@@ -72,7 +72,7 @@
         margin-left: 0;
         margin-right: 50px;
       }
-    }   
+    }
   </style>
 </figure>
 
@@ -91,10 +91,16 @@
   - [Easy Method](#easy-method)
   - [Not So Easy Method](#not-so-easy-method)
 - [ROM Games](#rom-games)
-  - [Using a USB Stick or Compatible USB Memory](#using-a-usb-stick-or-compatible-usb-memory)
+  - [Using a USB Stick (or other fitting drive)](#using-a-usb-stick-or-other-fitting-drive)
   - [Wirelessly with SFTP (A More Advanced Method)](#wirelessly-with-sftp-a-more-advanced-method)
 - [Pico-8 Games](#pico-8-games)
+- [Customization](#customization)
+  - [Custom Theme](#custom-theme)
+  - [Custom Boot Image](#custom-boot-image)
+  - [Custom Boot Video](#custom-boot-video)
+  - [Removing Boot Text](#removing-boot-text)
 - [Best Practices](#best-practices)
+- [Conclusion](#conclusion)
 
 ---
 
@@ -118,7 +124,7 @@ Building the GamePi43 console is relatively straightforward. The necessary compo
 
 For my build, I used a [Raspberry Pi 4 8GB Kit from Botland](#) and a [GamePi43 from Botland](https://botland.com.pl/gaming-pi-retro-pie-konsole/17598-gamepi43-zestaw-akcesoriow-do-budowy-konsoli-dla-raspberry-pi-b-2b-3b-3b-4b-waveshare-16967-5904422327965.html?cd=1050025856&ad=55008030609&kd=&gclid=Cj0KCQjwuZGnBhD1ARIsACxbAVi_yP_z9whvMxNqS_-G67z5Up9icvYHbGoLaR1e1NCGWmEW12LuSBYaAiQnEALw_wcB).
 
->**_Note:_**  
+?>**_Note:_**  
 Only the Raspberry Pi is needed for this particular project. I used the full kit only because it was part of other projects. If your focus is solely on the GamePi43 console, purchasing just the Raspberry Pi is a cost-effective option.
 
 The GamePi43 includes a screwdriver, but having your own, as well as a microfiber cloth to clean fingerprints off the screen, is recommended.
@@ -134,7 +140,8 @@ You may also need a clean USB stick, depending on your intended use for the cons
 
 Prepare your workspace to avoid losing parts or damaging the board due to static shock or environmental variables. Arrange all components in an orderly fashion, and inspect them for any potential damage that might cause delays later.
 
-**_Heed any warnings and precautions:_** These can be found on the product's website or packaging. Devices may vary, so adapt to different situations accordingly.
+!>**_Heed any warnings and precautions:_**   
+These can be found on the product's website or packaging. Devices may vary, so adapt to different situations accordingly. Check for compatibility beforehand.
 
 ### Device Assembly
 
@@ -152,7 +159,7 @@ With the physical device ready, the next step is to install the operating system
 
 Use Waveshare's customized version of the RetroPie/Recalbox operating system, configured with input and additional tweaks found [here](https://www.waveshare.com/wiki/GamePi43).
 
-Utilize an imaging application, like [Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the OS to the SD card. Insert it into the device, boot up, and configure settings such as timezone, WiFi, etc.
+Use imager app, like [Raspberry Pi Imager](https://www.raspberrypi.com/software/), to write the OS to the SD card. Insert it into the device, boot up, and configure settings such as timezone, WiFi, etc.
 
 If everything goes smoothly, all that remains is installing your chosen games, whether [ROM games](#rom-games) or [Pico-8 games](#pico-8-games).
 
@@ -180,7 +187,7 @@ Installing ROM games is incredibly simple. Below are two basic methods.
 
 Prepare a USB stick (8GB or more is recommended). Clean it and format to FAT32.
 
-Inside create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work)
+Inside create an empty directory called `retropie` (depending on the OS used that name may vary, that one worked for me byt you can also try `retropie-mount` or find other if both of them dont work).
 
 Then update the device (skip this step if you are already on the latest OS version):
 
@@ -237,11 +244,60 @@ It matters where you insert the game, it will work properly only when you insert
 
 ## Pico-8 Games
 
-You can purchase the license for Pico-8 [here](https://www.lexaloffle.com/pico-8.php#getpico8). Once purchased, download the Raspberry Pi zip version and unzip it to your SD card (the same one with your operating system).
+You can purchase the license for Pico-8 [here](https://www.lexaloffle.com/pico-8.php#getpico8).
+
+?>**Note:**    
+You can often get license from buying devices in a bundle,
+e.g. Picade already had pico-8 license in its box.
+
+Once purchased, download the Raspberry Pi zip version and unzip it to your SD card (the same one with your operating system).
 
 After that, add a folder named "pico-8" and inside it create a subfolder named "carts". Place any games you want in there.
 
 After that, you'll have to manually launch the Pico-8. But you're good to go!
+
+## Customization
+
+>Now the real kicker! The best thing about this device is the ability to customize literally every part of it, I will show few ways to do that, but feel free to explore yourself, options are unlimited!
+
+### Custom Theme
+### Custom Boot Image
+### Custom Boot Video
+### Removing Boot Text
+
+After booting the console, you see some sort of text messages regarding booting, this doesn't concern us too much, but looks unpleasing.
+
+Removing the text is preety straightforward:
+
+Turn on device and go into terminal using `F4` key on plugged in keyboard.
+
+> You can also do it with SFTP client, or other mean of accesing system files.
+
+Then find and open the `cmdline.txt` file, I've done it by using linux command:
+
+```terminal
+sudo nano /boot/cmdline.txt
+```
+`sudo` - run as administrator, and accept drastic changes.
+
+`nano` - open file using nano explorer.
+
+`/boot/cmdline.txt` - access cmdline.txt file inside boot directry.
+
+!> **_Be Aware:_**  
+Depending on the OS used the dirctories may vary.
+
+Inside of cmdline.txt file find `"console=tty1"` and change it to `"console=tty3"`.
+
+When done editing press `Ctr+X` > `Y` > `Enter` to save changes.
+
+Rebot the device.
+
+> While you are inside of the terminal you can use command 
+`reboot` to do so.
+
+And that's all, the text shows no longer, but there is black screen for some time so i reccomend doing custom splashscreen [image](#custom-boot-image) or [video](#custom-boot-video)!
+
 
 ## Best Practices
 
