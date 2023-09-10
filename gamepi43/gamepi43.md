@@ -317,7 +317,6 @@ Retropie > raspi-config > display options > underscan > NO > Finish
 ### Custom Boot Image
 ### Custom Boot Video
 ### Removing Boot Text
-### Game Scraping
 
 After booting the console, you see some sort of text messages regarding booting, this doesn't concern us too much, but looks unpleasing.
 
@@ -354,6 +353,8 @@ And that's all, the text shows no longer, but there is black screen for some tim
 
 If you come by any issues ETA PRIME made a great [video explaining it](https://www.youtube.com/watch?v=KGf225Qb02I&t=65s).
 
+
+### Game Scraping
 
 ## Best Practices
 
