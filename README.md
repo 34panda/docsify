@@ -1,8 +1,8 @@
-# Robotics and IoT Documentation :robot: :wrench: :house_with_garden:
+# RAIOT - Documentation Web Page :robot: :wrench: :house_with_garden:
 
-Welcome to academical documentation project focusing on Robotics and Internet of Things (IoT). This project aims to be a comprehensive guide covering various topics such as GamePi43, Picade, Raspberry Pi Smart Home, and much more.
+Welcome to academical project focusing on Robotics and Internet of Things. This project aims to be a comprehensive guide covering various topics such as GamePi43, Picade, Raspberry Pi Smart Home, and much more.
 
-I've used `Docsify` and `HTML` to build this interactive and easy-to-navigate documentation website.
+I've used `Docsify` and `HTML/CSS` to build this interactive and easy-to-navigate documentation website.
 
 ## Quick Links :link:
 
