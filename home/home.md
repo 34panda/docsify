@@ -1,7 +1,6 @@
 [ENG](/) | [PL](PL/home.md)
 <figure class="gpi">
-<link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
-                
+<link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">        
   <figcaption>ROBOTICS AND IOT<br><span>Academical e-learning course.</span></figcaption>
   <style>
     @import url('https://fonts.cdnfonts.com/css/major-mono-display-2');
