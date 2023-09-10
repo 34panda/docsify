@@ -95,10 +95,13 @@
   - [Wirelessly with SFTP (A More Advanced Method)](#wirelessly-with-sftp-a-more-advanced-method)
 - [Pico-8 Games](#pico-8-games)
 - [Customization](#customization)
-  - [Custom Theme](#custom-theme)
+  - [Default Themes](#default-themes)
+  - [Non-Default Themes](#non-default-themes)
+  - [Make content fit the screen](#make-content-fit-the-screen)
   - [Custom Boot Image](#custom-boot-image)
   - [Custom Boot Video](#custom-boot-video)
   - [Removing Boot Text](#removing-boot-text)
+  - [Game Scraping](#game-scraping)
 - [Best Practices](#best-practices)
 - [Conclusion](#conclusion)
 
@@ -260,10 +263,61 @@ After that, you'll have to manually launch the Pico-8. But you're good to go!
 
 >Now the real kicker! The best thing about this device is the ability to customize literally every part of it, I will show few ways to do that, but feel free to explore yourself, options are unlimited!
 
-### Custom Theme
+### Default Themes
+
+One of the best options given by Retropie's devs is ability to use different console themes and even create your own!
+
+To do so open:
+
+```device
+Retropie > raspi-config > ES Themes > Install/Update theme gallery
+```
+
+> You can view installed themes preview by going into `view theme gllery`.
+
+Then just choose witch one you like and remember its name in bottom-left corner.
+
+Go back to theme gallery and find `Install *theme name*` option and click it.
+
+Now the theme is installed on your device, but not used, to do so go to devices main page and go into MAIN MENU panel:
+
+```device
+MAIN MENU > THEME SET > *choose theme by going left-right* > Back
+```
+
+Reboot device and done!
+
+!> **_Disclaimer:_**  
+Themes look differently on different screens, sometimes text is too small/big or other UI elements are off, keep that in mind while choosing one.
+
+### Non-Default Themes
+
+It's fairly easy, almost the same stepps as above, but we need to download custom theme or create one ourselves.
+
+Cool one to download is [Epic Noir](https://github.com/c64-dev/es-theme-epicnoir) by Nick L (c64-dev) that has tutorial on their page on how to set it up.
+
+!>**_Disclaimer:_**  
+Not all themes look great on small screens, so keep that in mind.
+
+Place custom theme inside `emulationstation/themes`directory by using SFTP, Terminal or other means, reboot device, and go into MAIN MENU:
+
+```device
+MAIN MENU > THEME SET > *choose theme by going left-right* > Back
+```
+
+Reboot device again and done!
+
+
+### Make content fit the screen
+To do so, turn off underscan:
+
+```device
+Retropie > raspi-config > display options > underscan > NO > Finish
+```
 ### Custom Boot Image
 ### Custom Boot Video
 ### Removing Boot Text
+### Game Scraping
 
 After booting the console, you see some sort of text messages regarding booting, this doesn't concern us too much, but looks unpleasing.
 
@@ -297,6 +351,8 @@ Rebot the device.
 `reboot` to do so.
 
 And that's all, the text shows no longer, but there is black screen for some time so i reccomend doing custom splashscreen [image](#custom-boot-image) or [video](#custom-boot-video)!
+
+If you come by any issues ETA PRIME made a great [video explaining it](https://www.youtube.com/watch?v=KGf225Qb02I&t=65s).
 
 
 ## Best Practices
