@@ -17,7 +17,9 @@
   </style>
 </figure>
 
-> Niesamowity projekt.
+> Niesamowity projekt!
+
+?> Polska wersja w trakcie tłumaczenia :wrench:
 
 
 <div class="card-group">

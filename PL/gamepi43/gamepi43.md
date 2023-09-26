@@ -1,3 +1,5 @@
+[ENG](gamepi43/gamepi43.md) | [PL](PL/gamepi43/gamepi43.md)
+
 <figure class="gpi">
 <link href="https://fonts.cdnfonts.com/css/major-mono-display-2" rel="stylesheet">
                 
