@@ -17,10 +17,7 @@
   </style>
 </figure>
 
-> Niesamowity projekt!
-
 ?> Polska wersja w trakcie tłumaczenia :wrench:
-
 
 <div class="card-group">
     <div class="card5 card">
@@ -52,7 +49,7 @@
       </a>
     </div>
     <div class="card1 card">
-      <a href="#/gamepi43/gamepi43">
+      <a href="#/PL/gamepi43/gamepi43">
         <div class="crt">
           <div class="card-content">GamePi43</div>
         </div>
