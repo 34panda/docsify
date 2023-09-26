@@ -248,6 +248,7 @@ It matters where you insert the game, it will work properly only when you insert
 ## Pico-8 Games
 
 You can purchase the license for Pico-8 [here](https://www.lexaloffle.com/pico-8.php#getpico8).
+ 
 
 ?>**Note:**    
 You can often get license from buying devices in a bundle,
