@@ -330,7 +330,9 @@ To do so, turn off underscan:
 Retropie > raspi-config > display options > underscan > NO > Finish
 ```
 ### Custom Boot Image
+Coming soon! :hatching_chick:
 ### Custom Boot Video
+Coming soon! :hatching_chick:
 ### Removing Boot Text
 
 After booting the console, you see some sort of text messages regarding booting, this doesn't concern us too much, but looks unpleasing.
@@ -370,6 +372,7 @@ If you come by any issues ETA PRIME made a great [video explaining it](https://w
 
 
 ### Game Scraping
+Coming soon! :hatching_chick:
 
 ## Best Practices
 

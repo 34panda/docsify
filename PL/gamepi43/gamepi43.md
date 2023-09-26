@@ -343,7 +343,11 @@ Retropie > raspi-config > opcje wyświetlania > skalowanie > NIE > Zakończ
 ```
 
 ### Niestandardowy obraz uruchamiania
+Za niedługo! :hatching_chick:
+
 ### Niestandardowe wideo uruchamiania
+Za niedługo! :hatching_chick:
+
 ### Usuwanie tekstu uruchamiania
 
 Po uruchomieniu konsoli widzisz jakieś komunikaty tekstowe dotyczące uruchamiania. To nie jest dla nas istotne, ale wygląda nieestetycznie.
@@ -382,6 +386,7 @@ I to wszystko, tekst już się nie pojawia, ale przez jakiś czas jest czarny ek
 Jeśli napotkasz jakieś problemy, ETA PRIME stworzył świetne [wideo wyjaśniające to](https://www.youtube.com/watch?v=KGf225Qb02I&t=65s).
 
 ### Scrapowanie gier
+Za niedługo! :hatching_chick:
 
 ## Najlepsze praktyki
 
