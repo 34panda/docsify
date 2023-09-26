@@ -139,6 +139,8 @@ You may also need a clean USB stick, depending on your intended use for the cons
 
 ## Assembly Process
 
+![parts](assets/parts.jpg ":size=440vmin")
+
 ### Before Assembling
 
 Prepare your workspace to avoid losing parts or damaging the board due to static shock or environmental variables. Arrange all components in an orderly fashion, and inspect them for any potential damage that might cause delays later.
@@ -150,13 +152,20 @@ These can be found on the product's website or packaging. Devices may vary, so a
 
 Assembly is fairly straightforward if you have inspected all the necessary pieces. Follow the instructions included with the GamePi43 or consult the manufacturer's website for a more detailed description.
 
+
+![back](assets/back.jpeg ":size=330vmin")
+
 I found [this visual YouTube tutorial](https://www.youtube.com/watch?v=HrKpUuo6OUg&t=173s) by MakerMan to be helpful.
 
 During assembly, I encountered no significant issues. Inserting the HDMI adapter was slightly tricky but manageable. If you have a prepared SD card with the required system and games, insert it, plug in the power, and you're done! If not, further instructions on installing the [operating system](#operating-system) and [games](#pico-8-games) are provided below.
 
+![hold](assets/hold.jpeg ":size=330vmin")
+
 ## Operating System
 
 With the physical device ready, the next step is to install the operating system. Thankfully, Waveshare has a ready-made OS. Below, you'll find both the [easy method](#easy-method) and the [advanced method](#advanced-method).
+
+![os](assets/os.jpg ":size=330vmin")
 
 ### Easy Method
 
@@ -185,6 +194,9 @@ And it's done, that step is harder mainly because you need to configure every pa
 ## ROM Games
 
 Installing ROM games is incredibly simple. Below are two basic methods.
+
+
+![rayquaza](assets/rayquaza.jpg ":size=200vmin")
 
 ### Using a USB Stick (or other fitting drive)
 
@@ -373,4 +385,6 @@ If you come by any issues ETA PRIME made a great [video explaining it](https://w
 
 Whether you're a seasoned Raspberry Pi user or a complete novice, the GamePi43 offers something for everyone. With both easy and advanced setup options, as well as numerous game choices, this console promises hours of nostalgic gaming fun.
 
-Happy gaming!
+**Happy gaming!**
+
+![end](assets/end.jpeg ":size=300vmin")
